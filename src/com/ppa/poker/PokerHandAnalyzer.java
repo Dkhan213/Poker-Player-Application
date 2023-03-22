@@ -15,12 +15,15 @@ public class PokerHandAnalyzer {
         ROYAL_FLUSH
     }
 
-    private static HandType analyzeHand(Hand hand) {
+    // This method takes in a hand and analyzes it to return what kind of hand it is (e.g. 2-pair, 4-of-a-kind,
+    // flush, straight flush, royal flush)
+
+    private static HandType analyzeHand(booleans.poker.Hand hand) {
         hand.sortCards();
 
         if (hand.IS_STRAIGHT()) {
             if (hand.NUM_SUITS() == 1) {
-                if (hand.HIGHEST_RANK() == Card.Rank.ACE) {
+                if (hand.HIGHEST_RANK() == booleans.poker.Card.Rank.ACE) {
                     return HandType.ROYAL_FLUSH;
                 }
                 return HandType.STRAIGHT_FLUSH;
@@ -49,7 +52,7 @@ public class PokerHandAnalyzer {
     }
 
     public static void main(String... args) {
-        for (Hand hand : HandGenerator.generateHands()) {
+        for (booleans.poker.Hand hand : booleans.poker.HandGenerator.generateHands()) {
             System.out.println();
             hand.printHand();
             System.out.println(analyzeHand(hand));

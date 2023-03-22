@@ -2,6 +2,7 @@ package booleans.poker;
 
 import static java.lang.String.format;
 
+    // This is the main class to define the object "Card". It allows for the creation of a Card to be used in "Hand".
 public class Card implements Comparable<Card> {
     public enum Rank {
         TWO,

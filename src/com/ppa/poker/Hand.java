@@ -2,18 +2,19 @@ package booleans.poker;
 
 import java.util.Arrays;
 
+    // This is a class to define the object "Hand". It creates a hand to be used with the hand generator.
 public class Hand {
-    Card[] cards = new Card[5];
+    booleans.poker.Card[] cards = new booleans.poker.Card[5];
 
-    public Hand(Card[] cards) {
+    public Hand(booleans.poker.Card[] cards) {
         this.cards = cards;
     }
 
-    public Card[] getCards() {
+    public booleans.poker.Card[] getCards() {
         return cards;
     }
 
-    public void setCards(Card[] cards) {
+    public void setCards(booleans.poker.Card[] cards) {
         this.cards = cards;
     }
 
@@ -42,16 +43,16 @@ public class Hand {
         int spades = 0;
 
         for (int i = 0; i < cards.length; i++) {
-            if (cards[i].getSuit() == Card.Suit.CLUBS) {
+            if (cards[i].getSuit() == booleans.poker.Card.Suit.CLUBS) {
                 clubs = 1;
             }
-            if (cards[i].getSuit() == Card.Suit.DIAMONDS) {
+            if (cards[i].getSuit() == booleans.poker.Card.Suit.DIAMONDS) {
                 diamonds = 1;
             }
-            if (cards[i].getSuit() == Card.Suit.HEARTS) {
+            if (cards[i].getSuit() == booleans.poker.Card.Suit.HEARTS) {
                 hearts = 1;
             }
-            if (cards[i].getSuit() == Card.Suit.SPADES) {
+            if (cards[i].getSuit() == booleans.poker.Card.Suit.SPADES) {
                 spades = 1;
             }
         }
@@ -78,7 +79,7 @@ public class Hand {
         return true;
     }
 
-    public Card.Rank HIGHEST_RANK() {
+    public booleans.poker.Card.Rank HIGHEST_RANK() {
         return cards[4].getRank();
     }
 
@@ -94,7 +95,7 @@ public class Hand {
     }
 
     public void printHand() {
-        for (Card c : cards) {
+        for (booleans.poker.Card c : cards) {
             System.out.println(c);
         }
     }
